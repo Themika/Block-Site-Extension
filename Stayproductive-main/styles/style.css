@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 25rem;
+    height: 30rem;
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 10px;
+}
+
+.container {
+    background-color: #ffffff; /* White background */
+    height: 100%;
+}
+.topItem{
+    display: grid;
+    grid-template-rows: 50px 350px auto;
+    grid-gap: 20px;
+    height: 100%;
+}
+
+.Info{
+    display: grid;
+    grid-template-rows: auto 210px 40px 40px;
+    grid-gap: 10px;
+    margin: 10px;    
+}
+h1 {
+    background-color: #3498db; /* Bright blue background */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3498db; /* Bright blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+li {
+    margin: 0 10px; /* Adjust the margin for even spacing */
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 80px;
+    border-radius: 10px;
+}
+
+li a:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+}
+
+
+#btn,
+#btn-unclock {
+    background-color: #3498db; /* Bright blue background */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover,
+#btn-unclock:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    color: white;
+}
+
+p{
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+h4{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+}
