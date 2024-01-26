@@ -71,7 +71,6 @@ document.getElementById("btn").addEventListener("click", () => {
             BlockedUrls: [
               ...data.BlockedUrls,
               { status: "In_Progress", url: WebsiteHostName },
-              console.log("In progress"),
             ],
           });
 

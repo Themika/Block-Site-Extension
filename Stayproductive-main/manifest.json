@@ -17,7 +17,6 @@
             ],
             "js": [
                 "./scripts/contentScript.js",
-                "./scripts/d3.v6.min.js",  
                 "./scripts/chart.js"
             ]
         }
