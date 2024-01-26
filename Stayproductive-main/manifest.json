@@ -17,7 +17,7 @@
             ],
             "js": [
                 "./scripts/contentScript.js",
-                "./scripts/chart.js"
+                "./scripts/chartLogic.js"
             ]
         }
     ],
