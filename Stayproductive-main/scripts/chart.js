@@ -8,6 +8,7 @@ document.head.appendChild(d3Script);
 d3Script.onload = function () {
   console.log("d3Script is loaded");
   // Example: Append an SVG element to the body
+  //
   const svg = d3
     .select("body")
     .append("svg")
