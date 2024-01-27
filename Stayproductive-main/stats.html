@@ -12,8 +12,12 @@
         <h1>Stay Productive</h1>
         <div class="topItemMain">
           <div class="Info">
-            <p>Stats</p>
-            <div class="stat-box"><canvas id="myChart"></canvas></div>
+            <div class="stat-box">
+              <p>Stats</p>
+              <div style="width: 200px">
+                <canvas id="acquisitions"></canvas>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -24,9 +28,6 @@
       <li><a href="stats.html">Stats</a></li>
       <li><a href="contact.asp">Themes</a></li>
     </ul>
-    <!-- Include the Chart.js library -->
-    <script src="node_modules\chart.js"></script>
-    <!-- Your custom script that uses Chart.js -->
     <script type="module" src="scripts/chartLogic.js"></script>
   </body>
 </html>

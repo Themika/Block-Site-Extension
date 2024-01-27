@@ -31,5 +31,9 @@
     ],
     "host_permissions": [
         "<all_urls>"
-    ]
+    ],
+    "dependencies": {
+        "@cubejs-client/core": "^0.31.0",
+        "chart.js": "^4.0.0"
+      }
 }
