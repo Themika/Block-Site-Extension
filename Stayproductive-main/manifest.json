@@ -2,7 +2,7 @@
     "name": "Stay Productive",
     "description": "Stay productive description",
     "version": "0.0.1",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "action": {
         "default_popup": "./popup.html"
     },
@@ -16,8 +16,7 @@
                 "./styles/style.css"
             ],
             "js": [
-                "./scripts/contentScript.js",
-                "./scripts/chartLogic.js"
+                "./scripts/contentScript.js"
             ]
         }
     ],
@@ -29,11 +28,8 @@
         "activeTab",
         "storage"
     ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'",
     "host_permissions": [
         "<all_urls>"
-    ],
-    "dependencies": {
-        "@cubejs-client/core": "^0.31.0",
-        "chart.js": "^4.0.0"
-      }
+    ]
 }
