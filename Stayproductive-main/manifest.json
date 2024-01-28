@@ -21,7 +21,8 @@
         {
           "matches": ["<all_urls>"],
           "css": ["./styles/ContentScript.css", "./styles/style.css"],
-          "js": ["node_modules/chart.js/dist/chart.umd.js", "./scripts/contentScript.js", "./scripts/chartLogic.js"]
+          "js": ["./scripts/contentScript.js", "./scripts/chartLogic.js","./node_modules/chart.js/dist/chart.umd.js"]
         }
       ]
+    
 }
