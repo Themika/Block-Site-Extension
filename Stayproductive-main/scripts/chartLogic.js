@@ -20,17 +20,17 @@ function initChart() {
   // Initialize your chart here
   const chartData = {
     labels: [
-      "Red",
-      "Blue",
-      "Yellow",
-      "Green",
-      "Purple",
-      "Orange",
-      "Hours Saved",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sudnday",
     ],
     datasets: [
       {
-        label: "# of Votes",
+        label: "# of hours saved",
         data: [12, 19, 3, 5, 2, 3, 5],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -39,6 +39,7 @@ function initChart() {
           "rgba(75, 192, 192, 0.2)",
           "rgba(153, 102, 255, 0.2)",
           "rgba(255, 159, 64, 0.2)",
+          "rgba(255, 99, 255, 0.2)",
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",
@@ -47,6 +48,7 @@ function initChart() {
           "rgba(75, 192, 192, 1)",
           "rgba(153, 102, 255, 1)",
           "rgba(255, 159, 64, 1)",
+          "rgba(255, 99, 255, 1)",
         ],
         borderWidth: 1,
       },
@@ -54,7 +56,7 @@ function initChart() {
   };
 
   new Chart(ctx, {
-    type: "bar",
+    type: "line",
     data: chartData,
     options: {
       scales: {
