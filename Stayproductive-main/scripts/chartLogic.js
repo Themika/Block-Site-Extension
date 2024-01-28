@@ -1,4 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
+function loadChartJS(callback) {
+  const script = document.createElement("script");
+  script.src = chrome.runtime.getURL("node_modules/chart.js/dist/chart.umd.js");
+  script.onload = function () {
+    callback();
+  };
+  (document.head || document.documentElement).appendChild(script);
+}
+
+function initChart() {
   const canvas = document.getElementById("myChart");
 
   if (!canvas) {
@@ -10,11 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize your chart here
   const chartData = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green",
+      "Purple",
+      "Orange",
+      "Hours Saved",
+    ],
     datasets: [
       {
         label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 5, 2, 3, 5],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -47,4 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-});
+}
+
+if (document.readyState === "complete") {
+  loadChartJS(initChart);
+} else {
+  window.onload = function () {
+    loadChartJS(initChart);
+  };
+}
