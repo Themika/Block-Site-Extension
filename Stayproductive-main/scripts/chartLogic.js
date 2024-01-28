@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("myChart");
+
+  if (!canvas) {
+    console.error("Canvas element with ID 'myChart' not found.");
+    return;
+  }
+
   const ctx = canvas.getContext("2d");
 
   // Initialize your chart here
@@ -42,4 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-// Rest of your code here
