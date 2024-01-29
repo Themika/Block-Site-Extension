@@ -7,6 +7,13 @@ function loadChartJS(callback) {
   (document.head || document.documentElement).appendChild(script);
 }
 
+// function hours(a) {
+//   UniversalTImeIndex.length += 1;
+//   for (let i = 0; i < UniversalTImeIndex.length; i++) {
+//     a = UniversalTImeIndex[i] += UniversalTImeIndex[(i += 1)];
+//     return a;
+//   }
+// }
 function initChart() {
   const canvas = document.getElementById("myChart");
 
@@ -31,7 +38,7 @@ function initChart() {
     datasets: [
       {
         label: "# of hours saved",
-        data: [12, 19, 3, 5, 2, 3, 5],
+        data: [24, 24, 3, 5, 2, 3, 5],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -51,6 +58,8 @@ function initChart() {
           "rgba(255, 99, 255, 1)",
         ],
         borderWidth: 1,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.55,
       },
     ],
   };

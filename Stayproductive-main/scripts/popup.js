@@ -1,6 +1,8 @@
 var WebsiteUrl;
 var WebsiteHostName;
 
+var UniversalTImeIndex = [];
+
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   WebsiteUrl = tabs[0].url;
   WebsiteHostName = new URL(tabs[0].url).hostname;
@@ -21,11 +23,13 @@ function ShowError(text) {
     document.getElementById("ERRORcontainer").remove();
   }, 3000);
 }
-
 document.getElementById("btn").addEventListener("click", () => {
   if (WebsiteUrl.toLowerCase().includes("chrome://")) {
     ShowError("You cannot block a chrome URL");
   } else {
+    const d = 24;
+    UniversalTImeIndex.push(d);
+    console.log(UniversalTImeIndex);
     chrome.storage.local.get("BlockedUrls", (data) => {
       if (data.BlockedUrls === undefined) {
         chrome.storage.local.set({
