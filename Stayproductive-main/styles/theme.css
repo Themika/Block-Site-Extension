@@ -85,4 +85,24 @@ h4{
 #SetDefault{
     height: fit-content;
     width: fit-content;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resetButton{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: var(--c3);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--c3);
+    color: var(--c5);
+    margin-bottom: 2rem;
 }
