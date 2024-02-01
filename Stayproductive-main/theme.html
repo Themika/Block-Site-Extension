@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/theme.css" />
     <title>Document</title>
   </head>
   <body>
@@ -11,11 +12,22 @@
         <h1>Stay Productive</h1>
         <div class="topItemMain">
           <div class="Info">
-            <p>You are currently on :</p>
-            <h4 id="url"></h4>
-            <div class="box"></div>
-            <button id="btn">BLOCK THIS URL</button>
-            <button id="btn-unclock">Unblock Url</button>
+            <button id="resetButton">Set Default</button>
+            <div class="navBar-ExtensionName">
+              <input type="color" id="navBar-ExtensionNameColor" />
+            </div>
+            <div class="bodyColor">
+              <input type="color" id="bodyColor" />
+            </div>
+            <div class="bannerColorPicker">
+              <input type="color" id="bannerColor" />
+            </div>
+            <div class="hoverColorPicker">
+              <input type="color" id="hoverColor" />
+            </div>
+            <div class="textColorPcker">
+              <input type="color" id="textColor" />
+            </div>
           </div>
         </div>
       </div>
@@ -26,5 +38,6 @@
       <li><a href="stats.html">Stats</a></li>
       <li><a href="theme.html">Themes</a></li>
     </ul>
+    <script src="scripts/colorTheme.js"></script>
   </body>
 </html>
