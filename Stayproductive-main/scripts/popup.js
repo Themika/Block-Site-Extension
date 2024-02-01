@@ -34,11 +34,21 @@ document.getElementById("btn").addEventListener("click", () => {
       const d = new Date();
       let day = d.getDay();
       console.log(day);
+      day = day === 0 ? 6 : day - 1; // Adjust to make Monday the first day
+      // Calculate the previous Monday
+      let lastMonday = new Date(d);
+      lastMonday.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+
+      // If the current date is after the last Monday, reset the timeData
+      if (d > lastMonday) {
+        timeData = Array.from({ length: 7 }, () => 0);
+      }
 
       hoursSaved += 2;
       timeData[day] += hoursSaved;
       chrome.storage.local.set({ timeData: timeData });
       console.log(data.timeData);
+      console.log(timeData[day]);
       updateChart(timeData[day]);
 
       chrome.storage.local.get("BlockedUrls", (data) => {

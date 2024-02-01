@@ -7,7 +7,7 @@ function loadChartJS(callback) {
   (document.head || document.documentElement).appendChild(script);
 }
 
-function initChart() {
+function initChart(dayData) {
   const canvas = document.getElementById("myChart");
 
   if (!canvas) {
@@ -32,7 +32,7 @@ function initChart() {
       datasets: [
         {
           label: "# of hours saved",
-          data: timeData && timeData,
+          data: timeData,
           backgroundColor: "rgba(75, 192, 192, 0.2)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
