@@ -96,13 +96,19 @@ h4{
     appearance: none;
     border: none;
     outline: none;
-    background: var(--c3);
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    background-color: var(--c3);
     color: var(--c5);
     margin-bottom: 2rem;
+    background-image: linear-gradient(to bottom, var(--c3) 50%,var(--c4) 50%);
+    background-size: 200% 200%;
+    transition: 0.4s ease-out;
+}
+
+.resetButton:hover{
+    background-position: bottom;
+
 }
