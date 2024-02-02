@@ -2,7 +2,7 @@ var WebsiteUrl; //Stores the URL of the currently active tab
 var WebsiteHostName; //Stores the hostname of the currently active tab's URL.
 let hoursSaved = 0; // move this line inside the event listener
 let timeData = Array.from({ length: 7 }, () => 0); // Initialize timeData for each day
-
+let monday = false;
 //Gets the current tab and adds the current tab and changes teh WebsiteHostName
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   WebsiteUrl = tabs[0].url;
@@ -35,21 +35,28 @@ document.getElementById("btn").addEventListener("click", () => {
       let day = d.getDay();
       console.log(day);
       day = day === 0 ? 6 : day - 1; // Adjust to make Monday the first day
-      // Calculate the previous Monday
-      let lastMonday = new Date(d);
-      lastMonday.setDate(d.getDate() - ((d.getDay() + 6) % 7));
 
-      // If the current date is after the last Monday, reset the timeData
-      if (d > lastMonday) {
-        timeData = Array.from({ length: 7 }, () => 0);
+      // Check if there is existing data for the current day
+      if (!data.timeData) {
+        // If no data at all, initialize it
+        data.timeData = Array.from({ length: 7 }, () => 0);
+      }
+      if (day === 0 && !data.resetDone) {
+        data.timeData = Array.from({ length: 7 }, () => 0);
+        data.resetDone = true;
+
+        // Update the timeData array and set the resetDone flag in storage
+        chrome.storage.local.set({ timeData: data.timeData, resetDone: true });
       }
 
       hoursSaved += 2;
-      timeData[day] += hoursSaved;
-      chrome.storage.local.set({ timeData: timeData });
+      data.timeData[day] += hoursSaved;
+      // Update the timeData array in storage
+      chrome.storage.local.set({ timeData: data.timeData });
+
       console.log(data.timeData);
-      console.log(timeData[day]);
-      updateChart(timeData[day]);
+      console.log(data.timeData[day]);
+      updateChart(data.timeData[day]);
 
       chrome.storage.local.get("BlockedUrls", (data) => {
         if (data.BlockedUrls === undefined) {
