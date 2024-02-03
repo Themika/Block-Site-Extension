@@ -16,7 +16,7 @@ body {
     margin: 10px;
 }
 
-.container {
+.container-extension-popup {
     background-color: var(--c2); /* White background */
     height: 100%;
 }
