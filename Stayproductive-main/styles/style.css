@@ -33,7 +33,7 @@ body {
     grid-gap: 10px;
     margin: 10px;    
 }
-h1 {
+#Name-Of-Extension {
     background-color: var(--c3); /* Bright blue background */
     color: var(--c2); /* White text color */
     padding: 10px;
@@ -91,12 +91,12 @@ li a:hover {
     color: var(--c2);
 }
 
-p{
+#Currently-On{
     text-align: center;
     font-weight: 900;
     font-size: 15px;
 }
-h4{
+#url{
     text-align: center;
     font-weight: 900;
     font-size: 30px;
