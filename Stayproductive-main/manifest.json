@@ -9,6 +9,9 @@
     "background": {
         "service_worker": "./scripts/background.js"
     },
+    "icons": {
+      "128": "Block Site Icon.png"
+   },
     "permissions": [
         "tabs",
         "activeTab",
