@@ -36,7 +36,6 @@ h1 {
     background-color: var(--c3); /* Bright blue background */
     color: var(--c2); /* White text color */
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
 }
 

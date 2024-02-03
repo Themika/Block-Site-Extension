@@ -1,7 +1,9 @@
 * {
     margin: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-:root{
+
+:root {
     --c1: #f0f0f0;
     --c2: #ffffff;
     --c3: #3498db;
@@ -12,31 +14,33 @@
 body {
     width: 25rem;
     height: 30rem;
-    background-color: var(--c1); /* Light gray background */
+    background-color: var(--c1);
     margin: 10px;
 }
+
 .container {
-    background-color: var(--c2); /* White background */
+    background-color: var(--c2);
     height: 100%;
 }
-.topItem{
+
+.topItem {
     display: grid;
     grid-template-rows: 50px 350px auto;
     grid-gap: 20px;
     height: 100%;
 }
 
-.Info{
+.Info {
     display: grid;
     grid-template-rows: auto;
     grid-gap: 10px;
-    margin: 10px;    
+    margin: 10px;
 }
+
 h1 {
-    background-color: var(--c3); /* Bright blue background */
-    color: var(--c5); /* White text color */
+    background-color: var(--c3);
+    color: var(--c5);
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -45,7 +49,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--c3); /* Bright blue background */
+    background-color: var(--c3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,12 +58,12 @@ ul {
 }
 
 li {
-    margin: 0 10px; /* Adjust the margin for even spacing */
+    margin: 0 10px;
 }
 
 li a {
     display: block;
-    color: var(--c5);;
+    color: var(--c5);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -68,31 +72,25 @@ li a {
 }
 
 li a:hover {
-    background-color: var(--c4); /* Slightly darker blue on hover */
+    background-color: var(--c4);
 }
 
-p{
+p, h4 {
     text-align: center;
     font-weight: 900;
-    font-size: 15px;
-}
-h4{
-    text-align: center;
-    font-weight: 900;
-    font-size: 30px;
 }
 
-#SetDefault{
+#SetDefault {
     height: fit-content;
     width: fit-content;
-    
 }
-.buttons{
-    display: flex;
+
+.buttons {
     flex-direction: column;
     align-items: center;
 }
-.resetButton{
+
+.resetButton {
     appearance: none;
     border: none;
     outline: none;
@@ -103,12 +101,12 @@ h4{
     border-radius: 0.5rem;
     color: var(--c5);
     margin-bottom: 2rem;
-    background-image: linear-gradient(to bottom, var(--c3) 50%,var(--c4) 50%);
+    background-image: linear-gradient(to bottom, var(--c3) 50%, var(--c4) 50%);
     background-size: 200% 200%;
     transition: 0.4s ease-out;
+    width: 96%;
 }
 
-.resetButton:hover{
+.resetButton:hover {
     background-position: bottom;
-
 }

@@ -149,6 +149,10 @@ document.getElementById("btn").addEventListener("click", () => {
     });
   }
 });
+
+document.getElementById("btn-unlock").addEventListener("click", () => {
+  ShowError("Sorry This Is For Your Own Sake");
+});
 // Function to update the chart
 function updateChart(dayData) {
   chrome.storage.local.get("BlockedUrls", (data) => {

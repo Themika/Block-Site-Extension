@@ -37,7 +37,6 @@ h1 {
     background-color: var(--c3); /* Bright blue background */
     color: var(--c2); /* White text color */
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -74,7 +73,7 @@ li a:hover {
 
 
 #btn,
-#btn-unclock {
+#btn-unlock {
     background-color: var(--c3); /* Bright blue background */
     color: var(--c2); /* White text color */
     border: none;
@@ -87,7 +86,7 @@ li a:hover {
 }
 
 #btn:hover,
-#btn-unclock:hover {
+#btn-unlock:hover {
     background-color: var(--c4); /* Slightly darker blue on hover */
     color: var(--c2);
 }

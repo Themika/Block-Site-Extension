@@ -9,11 +9,11 @@ const bodyStyle = getComputedStyle(document.body);
 
 // Load colors from storage and apply them to the elements
 chrome.storage.sync.get(["c1", "c2", "c3", "c4", "c5"], (result) => {
-  document.body.style.setProperty("#f0f0f0" || "--c1", result.c1);
-  document.body.style.setProperty("#ffffff" || "--c2", result.c2);
-  document.body.style.setProperty("#3498db" || "--c3", result.c3);
-  document.body.style.setProperty("#2980b9" || "--c4", result.c4);
-  document.body.style.setProperty("#ffffff" || "--c5", result.c5);
+  document.body.style.setProperty("--c1", result.c1 || "#f0f0f0");
+  document.body.style.setProperty("--c2", result.c2 || "#ffffff");
+  document.body.style.setProperty("--c3", result.c3 || "#3498db");
+  document.body.style.setProperty("--c4", result.c4 || "#2980b9");
+  document.body.style.setProperty("--c5", result.c5 || "#ffffff");
 });
 
 c1.addEventListener("input", () => {
