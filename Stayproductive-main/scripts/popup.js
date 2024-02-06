@@ -2,7 +2,6 @@ var WebsiteUrl; //Stores the URL of the currently active tab
 var WebsiteHostName; //Stores the hostname of the currently active tab's URL.
 let hoursSaved = 0; // move this line inside the event listener
 let timeData = Array.from({ length: 7 }, () => 0); // Initialize timeData for each day
-let monday = false;
 //Gets the current tab and adds the current tab and changes teh WebsiteHostName
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   WebsiteUrl = tabs[0].url;
@@ -35,18 +34,10 @@ document.getElementById("btn").addEventListener("click", () => {
       let day = d.getDay();
       console.log(day);
       day = day === 0 ? 6 : day - 1; // Adjust to make Monday the first day
-
       // Check if there is existing data for the current day
       if (!data.timeData) {
         // If no data at all, initialize it
         data.timeData = Array.from({ length: 7 }, () => 0);
-      }
-      if (day === 0 && !data.resetDone) {
-        data.timeData = Array.from({ length: 7 }, () => 0);
-        data.resetDone = true;
-
-        // Update the timeData array and set the resetDone flag in storage
-        chrome.storage.local.set({ timeData: data.timeData, resetDone: true });
       }
 
       hoursSaved += 2;

@@ -122,7 +122,7 @@ p, h4 {
     appearance: none;
     border: none;
     outline: none;
-    background-image: linear-gradient(to right, var(--c3) 50%, var(--c4) 50%);
+    background-image: linear-gradient(to right, var(--c4) 50%, var(--c3) 50%);
     background-size: 200% 200%;
     transition: 0.4s ease-out;
     text-align: center;
